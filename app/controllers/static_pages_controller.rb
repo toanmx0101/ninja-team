@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
 
 	def search
 		@users = User.where("user_name LIKE '%#{search_params[:content]}%'")
-		@posts = Post.where("con`tent LIKE '%#{search_params[:content]}%'")
+		@posts = Post.where("content LIKE '%#{search_params[:content]}%'")
 	end
 
 

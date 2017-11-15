@@ -11,7 +11,6 @@
         <%= form_for [current_user, post],
           url: user_post_path(current_user, post) , method: :patch,
           multipart: true, authenticity_token: true, remote: true do |f| %>
-          <%= image_tag post.file_url, class: "img-responsive post-image" %>
           <div class="field">
             <%= f.file_field :file, class: "post-file" %>
           </div>
